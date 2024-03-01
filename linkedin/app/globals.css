@@ -1,0 +1,508 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --blue-border: #76b4e1;
+  --gray-border: #dedede;
+  --gray-text: #adadad;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f6f8f9;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+input {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+section {
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+/* UTILITY STYLES */
+.p-20 {
+  padding: 20px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.blue-border {
+  border: 1px solid rgba(143, 202, 245, 0.3);
+}
+
+/* BUTTON STYLES */
+.btn-form {
+  height: 35px;
+  border-radius: 50px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.btn-full {
+  opacity: 1;
+  background: var(--blue-border);
+  color: #fff;
+}
+
+.btn-full:hover {
+  opacity: 0.8;
+}
+
+.btn-outline {
+  opacity: 1;
+  background: #fff;
+  border: 2px solid var(--blue-border);
+  color: var(--blue-border);
+}
+
+.btn-outline:hover {
+  opacity: 0.8;
+}
+
+.btn-circle-blue {
+  opacity: 1;
+  align-content: center;
+  border: 2px solid var(--blue-border);
+  border-radius: 50%;
+  background: #fff;
+  margin-left: 10px;
+}
+
+.btn-circle-blue:hover {
+  opacity: 0.8;
+}
+
+/* *** MAIN HEADER & SUB HEADER STYLE *** */
+
+.main-header,
+.sub-header {
+  background: #fff;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.sub-header {
+  margin-bottom: 20px;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.logo img {
+  height: 30px;
+  margin-right: 30px;
+}
+
+.search-bar-container,
+.icon-nav-container {
+  justify-content: center;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+  padding: 25px 30px;
+}
+
+.search-bar {
+  height: 30px;
+  border: 1px solid var(--gray-border);
+  border-radius: 50px;
+  padding: 5px 10px;
+}
+
+.main-nav-container {
+  flex: auto;
+  padding: 25px 30px;
+}
+
+.main-nav {
+  justify-content: space-between;
+}
+
+.main-nav li,
+.icon-nav li {
+  font-weight: 300;
+  transition: transform 0.2s ease-in-out;
+}
+
+.main-nav li:hover,
+.icon-nav li:hover {
+  transform: translateY(-3px);
+}
+
+.main-nav li:not(:last-child),
+.icon-nav li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.icon {
+  width: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.account-photo img {
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+
+.sub-nav {
+  height: 40px;
+}
+
+.sub-nav li {
+  font-size: 14px;
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+.sub-nav li a {
+  padding: 10px 20px;
+}
+
+.sub-nav a:hover {
+  border-bottom: 2px solid var(--blue-border);
+}
+
+/* *** PAGE CONTENT STYLE *** */
+
+/* LEFT *ASIDE* STYLE */
+.left-aside {
+  width: 200px;
+  background: #fff;
+  flex-direction: column;
+}
+
+.profile-info {
+  text-align: center;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.job-description {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.user-location {
+  font-size: 14px;
+  color: var(--gray-text);
+}
+
+.profile-info button:last-child {
+  justify-content: center;
+}
+
+.profile-stats {
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.profile-stats div {
+  width: 50%;
+}
+
+.profile-stats div:first-child {
+  border-right: 1px solid var(--gray-border);
+}
+
+.social-stats {
+  font-weight: 700;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-stats span,
+.profile-name span {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--gray-text);
+}
+
+.profile-links {
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.profile-links .link:first-child {
+  margin-bottom: 10px;
+}
+
+.link a {
+  color: var(--gray-text);
+  font-size: 12px;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+/* CENTER *SECTION* STYLE*/
+.center-section {
+  width: 700px;
+  margin: 0 20px;
+}
+
+/* SECTION HEADERS STYLE */
+.section-title {
+  text-transform: uppercase;
+}
+
+.section-title-container {
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+/* POSTS SECTION STYLE */
+
+.post-grid,
+.recomendation-grid,
+.following-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.post-photo,
+.testimonial {
+  margin-bottom: 10px;
+}
+
+.post:hover a {
+  text-decoration: underline;
+}
+
+.post-title {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.post-date {
+  font-size: 14px;
+  color: var(--gray-text);
+}
+
+/* BACKGROUND SECTION STYLE */
+.background-content-row {
+  margin-bottom: 20px;
+}
+
+.background-row-title h3 {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.summary p {
+  margin-left: 25px;
+  padding: 10px;
+  line-height: 1.4;
+}
+
+.position-entity,
+.education-entity {
+  margin-left: 25px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.position-timeline,
+.education-timeline {
+  font-size: 14px;
+  color: var(--gray-text);
+}
+
+.company-position,
+.school {
+  margin-block: 5px;
+}
+
+.position-data a,
+.education-data a {
+  color: var(--blue-border);
+}
+
+.position-data a:hover,
+.education-data a:hover {
+  text-decoration: underline;
+}
+
+.position-entity img {
+  height: 60px;
+}
+
+.position-entity:last-child img {
+  height: 42px;
+  padding: 5px;
+}
+
+.skill-row {
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.skill {
+  margin-left: 25px;
+}
+
+.endorsement-amount {
+  padding: 10px;
+  border: 1px solid var(--gray-text);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.users-endorsements img,
+.users-endorsements button {
+  margin-left: 10px;
+}
+
+.users-endorsements button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.interests-tag {
+  margin-left: 25px;
+  padding: 10px;
+}
+
+.tag {
+  font-size: 14px;
+  background: var(--gray-border);
+  padding: 5px;
+  margin-right: 10px;
+}
+
+/* RECOMENDATIONS SECTION STYLE */
+.profile {
+  padding-left: 10px;
+}
+
+.testimonial-text {
+  border: 1px solid var(--gray-border);
+}
+
+/* FOLLOWING SECTION STYLE */
+.suggestion > a {
+  height: 120px;
+  border: 1px solid var(--gray-border);
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.suggestion button {
+  margin: 0;
+}
+
+.suggestion p {
+  margin-block: 10px;
+}
+
+.follow-btn {
+  color: var(--blue-border);
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.follow-btn:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT *ASIDE* STYLE*/
+.right-aside {
+  width: 200px;
+  flex-direction: column;
+}
+
+.viewed-profiles {
+  margin-bottom: 30px;
+}
+
+.right-aside-title {
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.profile {
+  margin: 20px 0;
+}
+
+.profile img {
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+.influencers div {
+  justify-content: space-evenly;
+}
+
+.influencers .profile-name {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.influencers .profile-name span {
+  font-size: 16px;
+}
+
+/* *** FOOTER STYLE *** */
+
+.footer {
+  border-top: 1px solid var(--gray-border);
+}
+
+.footer-text {
+  text-align: center;
+  font-weight: 400;
+}
